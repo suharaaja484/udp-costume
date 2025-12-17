@@ -19,20 +19,20 @@ echo ""
 echo ""
 echo ""
 sleep 5
-# change to time GMT+5:30
+# change to time GMT+7
 
-echo "change to time GMT+5:30 Sri Lanka"
-ln -fs /usr/share/zoneinfo/Asia/Colombo /etc/localtime
+echo "change to time GMT+7 Jakarta"
+ln -fs /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
 
 
 
 # install udp-custom
 echo downloading udp-custom
-wget "https://github.com/noobconner21/UDP-Custom-Script/raw/main/udp-custom-linux-amd64" -O /root/udp/udp-custom
+wget "https://github.com/suharaaja484/udp-costume/raw/main/udp-custom-linux-amd64" -O /root/udp/udp-custom
 chmod +x /root/udp/udp-custom
 
 echo downloading default config
-wget "https://raw.githubusercontent.com/noobconner21/UDP-Custom-Script/main/config.json" -O /root/udp/config.json
+wget "https://raw.githubusercontent.com/suharaaja484/udp-costume/main/config.json" -O /root/udp/config.json
 chmod 644 /root/udp/config.json
 
 if [ -z "$1" ]; then
@@ -79,10 +79,10 @@ sleep 5
 cd $HOME
 mkdir /etc/Sslablk
 cd /etc/Sslablk
-wget https://github.com/noobconner21/UDP-Custom-Script/raw/main/system.zip
+wget https://github.com/suharaaja484/udp-costume/raw/main/system.zip
 unzip system
 cd /etc/Sslablk/system
-mv menu /usr/local/bin
+mv udp /usr/local/bin
 cd /etc/Sslablk/system
 chmod +x ChangeUser.sh
 chmod +x Adduser.sh
@@ -91,7 +91,7 @@ chmod +x Userlist.sh
 chmod +x RemoveScript.sh
 chmod +x torrent.sh
 cd /usr/local/bin
-chmod +x menu
+chmod +x udp
 cd /etc/Sslablk
 rm system.zip
 
